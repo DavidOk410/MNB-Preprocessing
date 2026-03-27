@@ -59,11 +59,32 @@ def drop_high_missing_cols(df, missing_percent, threshold=50):
 def encode_categorical(df, protect_col="Paper"):
     """
     One-hot encode all categorical columns except `protect_col`.
+    Also convert boolean columns (True/False) to 1/0.
 
     Returns:
         df_encoded (pd.DataFrame): dataframe with encoded columns appended
         encoded_cols (list): names of the newly created one-hot columns
     """
+
+    # --- Convert boolean columns to 0/1 ---
+    # Case 1: actual bool dtype
+    bool_cols = df.select_dtypes(include=['bool']).columns.tolist()
+
+    # Case 2: object columns where every non-null cell is True/False (any form)
+    object_bool_cols = [
+        col for col in df.select_dtypes(include='object').columns
+        if df[col].dropna().isin([True, False, 'True', 'False']).all()
+    ]
+
+    all_bool_cols = list(set(bool_cols + object_bool_cols))
+
+    for col in all_bool_cols:
+        df[col] = df[col].apply(lambda x: 1 if x in (True, 'True') else (0 if x in (False, 'False') else x))
+
+    print("\nBoolean columns converted to 0/1:")
+    print(df[all_bool_cols])
+
+    # --- Identify categorical columns ---
     categorical_cols = (
         df.drop(columns=[protect_col], errors='ignore')
           .select_dtypes(include=['object', 'category'])
@@ -73,18 +94,20 @@ def encode_categorical(df, protect_col="Paper"):
     print("\nCategorical columns to encode:")
     print(categorical_cols)
 
+    # --- One-hot encoding ---
     cols_before = set(df.columns)
     df_encoded = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
-    cols_after = set(df_encoded.columns)
 
     encoded_cols = [c for c in df_encoded.columns if c not in cols_before]
+
+    # ✅ get_dummies produces bool dtype — convert to int immediately
+    df_encoded[encoded_cols] = df_encoded[encoded_cols].astype(int)
 
     print(f"One-hot encoded columns created ({len(encoded_cols)}):")
     print(encoded_cols)
     print("Shape after encoding:", df_encoded.shape)
 
     return df_encoded, encoded_cols
-
 
 def knn_impute(df, n_neighbors=5):
     """Impute missing values in numeric columns using KNN."""
