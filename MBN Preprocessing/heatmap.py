@@ -81,8 +81,7 @@ def encode_categorical(df, protect_col="Paper"):
     for col in all_bool_cols:
         df[col] = df[col].apply(lambda x: 1 if x in (True, 'True') else (0 if x in (False, 'False') else x))
 
-    print("\nBoolean columns converted to 0/1:")
-    print(df[all_bool_cols])
+    print("\nBoolean columns converted to 0/1.")
 
     # --- Identify categorical columns ---
     categorical_cols = (

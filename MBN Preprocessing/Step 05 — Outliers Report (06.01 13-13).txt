@@ -1,0 +1,1056 @@
+================================================================================
+  OUTLIER REMOVAL REPORT
+  Generated  :  2026-06-01 13:13:12
+  Method     :  Z-score  |  Threshold: |Z| > 3  →  row removed
+  Scored on  :  7 column(s)
+  Removed    :  349 of 2680 rows
+================================================================================
+
+  [01]  Paper: Ramakrishnan (1968)   |   Row 148   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3380  (Z=3.01)
+
+  [02]  Paper: Ramakrishnan (1968)   |   Row 167   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [03]  Paper: Ramakrishnan (1968)   |   Row 168   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [04]  Paper: Ramakrishnan (1968)   |   Row 169   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [05]  Paper: Ramakrishnan (1968)   |   Row 170   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [06]  Paper: Ramakrishnan (1968)   |   Row 171   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [07]  Paper: Ramakrishnan (1968)   |   Row 172   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [08]  Paper: Ramakrishnan (1968)   |   Row 173   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [09]  Paper: Ramakrishnan (1968)   |   Row 174   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [10]  Paper: Ramakrishnan (1968)   |   Row 175   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [11]  Paper: Ramakrishnan (1968)   |   Row 176   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [12]  Paper: Ramakrishnan (1968)   |   Row 177   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [13]  Paper: Ramakrishnan (1968)   |   Row 178   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [14]  Paper: Ramakrishnan (1968)   |   Row 179   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [15]  Paper: Ramakrishnan (1968)   |   Row 180   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [16]  Paper: Ramakrishnan (1968)   |   Row 181   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [17]  Paper: Ramakrishnan (1968)   |   Row 182   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [18]  Paper: Ramakrishnan (1968)   |   Row 183   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [19]  Paper: Ramakrishnan (1968)   |   Row 184   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [20]  Paper: Ramakrishnan (1968)   |   Row 185   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [21]  Paper: Ramakrishnan (1968)   |   Row 186   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [22]  Paper: Ramakrishnan (1968)   |   Row 187   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [23]  Paper: Ramakrishnan (1968)   |   Row 188   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [24]  Paper: Ramakrishnan (1968)   |   Row 189   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [25]  Paper: Ramakrishnan (1968)   |   Row 190   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [26]  Paper: Ramakrishnan (1968)   |   Row 191   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [27]  Paper: Ramakrishnan (1968)   |   Row 192   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [28]  Paper: Ramakrishnan (1968)   |   Row 193   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [29]  Paper: Ramakrishnan (1968)   |   Row 194   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [30]  Paper: Ramakrishnan (1968)   |   Row 195   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [31]  Paper: Ramakrishnan (1968)   |   Row 196   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [32]  Paper: Ramakrishnan (1968)   |   Row 197   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [33]  Paper: Ramakrishnan (1968)   |   Row 198   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [34]  Paper: Ramakrishnan (1968)   |   Row 199   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [35]  Paper: Ramakrishnan (1968)   |   Row 200   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [36]  Paper: Ramakrishnan (1968)   |   Row 201   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [37]  Paper: Ramakrishnan (1968)   |   Row 202   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [38]  Paper: Ramakrishnan (1968)   |   Row 203   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [39]  Paper: Ramakrishnan (1968)   |   Row 204   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [40]  Paper: Ramakrishnan (1968)   |   Row 205   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [41]  Paper: Ramakrishnan (1968)   |   Row 206   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [42]  Paper: Ramakrishnan (1968)   |   Row 207   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [43]  Paper: Ramakrishnan (1968)   |   Row 208   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [44]  Paper: Ramakrishnan (1968)   |   Row 209   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [45]  Paper: Ramakrishnan (1968)   |   Row 210   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [46]  Paper: Ramakrishnan (1968)   |   Row 211   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [47]  Paper: Ramakrishnan (1968)   |   Row 212   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [48]  Paper: Ramakrishnan (1968)   |   Row 213   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [49]  Paper: Ramakrishnan (1968)   |   Row 214   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [50]  Paper: Ramakrishnan (1968)   |   Row 215   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7.042  (Z=3.12)
+
+  [51]  Paper: Satyanarayan et al. (1969)   |   Row 429   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 21.64  (Z=3.48)
+
+  [52]  Paper: Satyanarayan et al. (1969)   |   Row 430   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 21.98  (Z=3.56)
+
+  [53]  Paper: Satyanarayan et al. (1969)   |   Row 431   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 21.91  (Z=3.54)
+
+  [54]  Paper: Satyanarayan et al. (1969)   |   Row 432   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 22.56  (Z=3.70)
+
+  [55]  Paper: Satyanarayan et al. (1969)   |   Row 433   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 22.49  (Z=3.68)
+
+  [56]  Paper: Satyanarayan et al. (1969)   |   Row 434   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 23.84  (Z=4.00)
+
+  [57]  Paper: Satyanarayan et al. (1969)   |   Row 435   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 24.12  (Z=4.07)
+
+  [58]  Paper: Satyanarayan et al. (1969)   |   Row 436   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 24.63  (Z=4.19)
+
+  [59]  Paper: Satyanarayan et al. (1969)   |   Row 437   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3877  (Z=3.50)  ·  Bubble detachment diameter - Dd (mm): 24.93  (Z=4.26)
+
+  [60]  Paper: Satyanarayan et al. (1969)   |   Row 438   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4422  (Z=4.05)  ·  Bubble detachment diameter - Dd (mm): 25.61  (Z=4.43)
+
+  [61]  Paper: Satyanarayan et al. (1969)   |   Row 439   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4883  (Z=4.51)  ·  Bubble detachment diameter - Dd (mm): 25.97  (Z=4.51)
+
+  [62]  Paper: Satyanarayan et al. (1969)   |   Row 440   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5725  (Z=5.35)  ·  Bubble detachment diameter - Dd (mm): 26.65  (Z=4.68)
+
+  [63]  Paper: Satyanarayan et al. (1969)   |   Row 441   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6559  (Z=6.19)  ·  Bubble detachment diameter - Dd (mm): 27.42  (Z=4.86)
+
+  [64]  Paper: Satyanarayan et al. (1969)   |   Row 442   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 7515  (Z=7.15)  ·  Bubble detachment diameter - Dd (mm): 27.98  (Z=4.99)
+
+  [65]  Paper: Satyanarayan et al. (1969)   |   Row 443   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 8730  (Z=8.36)  ·  Bubble detachment diameter - Dd (mm): 28.74  (Z=5.18)
+
+  [66]  Paper: Satyanarayan et al. (1969)   |   Row 444   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 1e+04  (Z=9.64)  ·  Bubble detachment diameter - Dd (mm): 29.68  (Z=5.40)
+
+  [67]  Paper: Satyanarayan et al. (1969)   |   Row 445   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 1.087e+04  (Z=10.50)  ·  Bubble detachment diameter - Dd (mm): 30.37  (Z=5.57)
+
+  [68]  Paper: Satyanarayan et al. (1969)   |   Row 446   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 1.203e+04  (Z=11.67)  ·  Bubble detachment diameter - Dd (mm): 31.15  (Z=5.76)
+
+  [69]  Paper: Satyanarayan et al. (1969)   |   Row 456   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3833  (Z=3.46)
+
+  [70]  Paper: Satyanarayan et al. (1969)   |   Row 457   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4341  (Z=3.97)
+
+  [71]  Paper: Satyanarayan et al. (1969)   |   Row 458   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4588  (Z=4.21)  ·  Bubble detachment diameter - Dd (mm): 19.9  (Z=3.06)
+
+  [72]  Paper: Satyanarayan et al. (1969)   |   Row 459   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5479  (Z=5.11)  ·  Bubble detachment diameter - Dd (mm): 20.49  (Z=3.20)
+
+  [73]  Paper: Satyanarayan et al. (1969)   |   Row 460   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6604  (Z=6.23)  ·  Bubble detachment diameter - Dd (mm): 21.51  (Z=3.45)
+
+  [74]  Paper: Satyanarayan et al. (1969)   |   Row 461   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6996  (Z=6.63)  ·  Bubble detachment diameter - Dd (mm): 21.76  (Z=3.51)
+
+  [75]  Paper: Satyanarayan et al. (1969)   |   Row 462   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 8165  (Z=7.80)  ·  Bubble detachment diameter - Dd (mm): 22.23  (Z=3.62)
+
+  [76]  Paper: Satyanarayan et al. (1969)   |   Row 463   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 9079  (Z=8.71)  ·  Bubble detachment diameter - Dd (mm): 23.1  (Z=3.83)
+
+  [77]  Paper: Satyanarayan et al. (1969)   |   Row 464   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 22.08  (Z=3.58)
+
+  [78]  Paper: Satyanarayan et al. (1969)   |   Row 465   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 21.99  (Z=3.56)
+
+  [79]  Paper: Satyanarayan et al. (1969)   |   Row 466   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 22.49  (Z=3.68)
+
+  [80]  Paper: Satyanarayan et al. (1969)   |   Row 467   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 22.06  (Z=3.58)
+
+  [81]  Paper: Satyanarayan et al. (1969)   |   Row 468   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 23.61  (Z=3.95)
+
+  [82]  Paper: Satyanarayan et al. (1969)   |   Row 469   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 23.57  (Z=3.94)
+
+  [83]  Paper: Satyanarayan et al. (1969)   |   Row 470   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 24.34  (Z=4.12)
+
+  [84]  Paper: Satyanarayan et al. (1969)   |   Row 471   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3439  (Z=3.06)  ·  Bubble detachment diameter - Dd (mm): 24.47  (Z=4.16)
+
+  [85]  Paper: Satyanarayan et al. (1969)   |   Row 472   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4174  (Z=3.80)  ·  Bubble detachment diameter - Dd (mm): 25.14  (Z=4.32)
+
+  [86]  Paper: Satyanarayan et al. (1969)   |   Row 473   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4620  (Z=4.25)  ·  Bubble detachment diameter - Dd (mm): 25.49  (Z=4.40)
+
+  [87]  Paper: Satyanarayan et al. (1969)   |   Row 474   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5467  (Z=5.10)  ·  Bubble detachment diameter - Dd (mm): 26.25  (Z=4.58)
+
+  [88]  Paper: Satyanarayan et al. (1969)   |   Row 475   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 7110  (Z=6.74)  ·  Bubble detachment diameter - Dd (mm): 27.61  (Z=4.91)
+
+  [89]  Paper: Satyanarayan et al. (1969)   |   Row 476   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 1.143e+04  (Z=11.07)  ·  Bubble detachment diameter - Dd (mm): 30.44  (Z=5.59)
+
+  [90]  Paper: Satyanarayan et al. (1969)   |   Row 477   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 1.203e+04  (Z=11.67)  ·  Bubble detachment diameter - Dd (mm): 30.58  (Z=5.62)
+
+  [91]  Paper: Satyanarayan et al. (1969)   |   Row 478   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 20.18  (Z=3.13)
+
+  [92]  Paper: Satyanarayan et al. (1969)   |   Row 479   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 20  (Z=3.08)
+
+  [93]  Paper: Satyanarayan et al. (1969)   |   Row 480   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 20.35  (Z=3.17)
+
+  [94]  Paper: Satyanarayan et al. (1969)   |   Row 481   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 22.15  (Z=3.60)
+
+  [95]  Paper: Satyanarayan et al. (1969)   |   Row 482   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4051  (Z=3.68)  ·  Bubble detachment diameter - Dd (mm): 24.21  (Z=4.09)
+
+  [96]  Paper: Satyanarayan et al. (1969)   |   Row 483   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4281  (Z=3.91)  ·  Bubble detachment diameter - Dd (mm): 24.63  (Z=4.19)
+
+  [97]  Paper: Satyanarayan et al. (1969)   |   Row 484   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5355  (Z=4.98)  ·  Bubble detachment diameter - Dd (mm): 25.57  (Z=4.42)
+
+  [98]  Paper: Satyanarayan et al. (1969)   |   Row 485   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5885  (Z=5.51)  ·  Bubble detachment diameter - Dd (mm): 26.01  (Z=4.52)
+
+  [99]  Paper: Satyanarayan et al. (1969)   |   Row 486   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6837  (Z=6.47)  ·  Bubble detachment diameter - Dd (mm): 26.92  (Z=4.74)
+
+  [100]  Paper: Satyanarayan et al. (1969)   |   Row 487   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 8222  (Z=7.85)  ·  Bubble detachment diameter - Dd (mm): 28.19  (Z=5.05)
+
+  [101]  Paper: Satyanarayan et al. (1969)   |   Row 497   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3528  (Z=3.15)
+
+  [102]  Paper: Satyanarayan et al. (1969)   |   Row 498   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4827  (Z=4.45)  ·  Bubble detachment diameter - Dd (mm): 20.03  (Z=3.09)
+
+  [103]  Paper: Satyanarayan et al. (1969)   |   Row 499   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5981  (Z=5.61)  ·  Bubble detachment diameter - Dd (mm): 21  (Z=3.32)
+
+  [104]  Paper: Satyanarayan et al. (1969)   |   Row 511   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3821  (Z=3.45)
+
+  [105]  Paper: Satyanarayan et al. (1969)   |   Row 512   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4833  (Z=4.46)
+
+  [106]  Paper: Satyanarayan et al. (1969)   |   Row 513   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3900  (Z=3.53)  ·  Bubble detachment diameter - Dd (mm): 20.64  (Z=3.24)
+
+  [107]  Paper: Satyanarayan et al. (1969)   |   Row 514   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6233  (Z=5.86)  ·  Bubble detachment diameter - Dd (mm): 21.78  (Z=3.51)
+
+  [108]  Paper: Satyanarayan et al. (1969)   |   Row 515   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6853  (Z=6.48)  ·  Bubble detachment diameter - Dd (mm): 22.67  (Z=3.72)
+
+  [109]  Paper: Satyanarayan et al. (1969)   |   Row 516   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4615  (Z=4.24)  ·  Bubble detachment diameter - Dd (mm): 24.63  (Z=4.19)
+
+  [110]  Paper: Satyanarayan et al. (1969)   |   Row 517   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3763  (Z=3.39)
+
+  [111]  Paper: Satyanarayan et al. (1969)   |   Row 518   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4559  (Z=4.19)  ·  Bubble detachment diameter - Dd (mm): 20.43  (Z=3.19)
+
+  [112]  Paper: Satyanarayan et al. (1969)   |   Row 519   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5092  (Z=4.72)  ·  Bubble detachment diameter - Dd (mm): 21.35  (Z=3.41)
+
+  [113]  Paper: Satyanarayan et al. (1969)   |   Row 520   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6034  (Z=5.66)  ·  Bubble detachment diameter - Dd (mm): 23.13  (Z=3.83)
+
+  [114]  Paper: Satyanarayan et al. (1969)   |   Row 522   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3476  (Z=3.10)
+
+  [115]  Paper: Satyanarayan et al. (1969)   |   Row 523   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3655  (Z=3.28)
+
+  [116]  Paper: Satyanarayan et al. (1969)   |   Row 524   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5092  (Z=4.72)  ·  Bubble detachment diameter - Dd (mm): 21.25  (Z=3.38)
+
+  [117]  Paper: Satyanarayan et al. (1969)   |   Row 528   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4174  (Z=3.80)
+
+  [118]  Paper: Scargiali et al. (2014)   |   Row 1392   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3496  (Z=3.12)
+
+  [119]  Paper: Scargiali et al. (2014)   |   Row 1393   |   1 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4319  (Z=3.95)
+
+  [120]  Paper: Scargiali et al. (2014)   |   Row 1394   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [121]  Paper: Scargiali et al. (2014)   |   Row 1395   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [122]  Paper: Scargiali et al. (2014)   |   Row 1396   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [123]  Paper: Scargiali et al. (2014)   |   Row 1397   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [124]  Paper: Scargiali et al. (2014)   |   Row 1398   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [125]  Paper: Scargiali et al. (2014)   |   Row 1399   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [126]  Paper: Scargiali et al. (2014)   |   Row 1400   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [127]  Paper: Scargiali et al. (2014)   |   Row 1401   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [128]  Paper: Scargiali et al. (2014)   |   Row 1402   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [129]  Paper: Scargiali et al. (2014)   |   Row 1403   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [130]  Paper: Scargiali et al. (2014)   |   Row 1404   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3514  (Z=3.14)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [131]  Paper: Scargiali et al. (2014)   |   Row 1405   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 4320  (Z=3.95)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [132]  Paper: Scargiali et al. (2014)   |   Row 1406   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5023  (Z=4.65)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [133]  Paper: Scargiali et al. (2014)   |   Row 1407   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 5623  (Z=5.25)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)
+
+  [134]  Paper: Scargiali et al. (2014)   |   Row 1408   |   3 column(s) flagged
+        Gas flow rate - Qg (mL/min): 6171  (Z=5.80)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)  ·  Bubble detachment diameter - Dd (mm): 19.69  (Z=3.01)
+
+  [135]  Paper: Scargiali et al. (2014)   |   Row 1409   |   3 column(s) flagged
+        Gas flow rate - Qg (mL/min): 7166  (Z=6.80)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)  ·  Bubble detachment diameter - Dd (mm): 20.89  (Z=3.30)
+
+  [136]  Paper: Scargiali et al. (2014)   |   Row 1410   |   3 column(s) flagged
+        Gas flow rate - Qg (mL/min): 8040  (Z=7.67)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)  ·  Bubble detachment diameter - Dd (mm): 21.44  (Z=3.43)
+
+  [137]  Paper: Scargiali et al. (2014)   |   Row 1411   |   3 column(s) flagged
+        Gas flow rate - Qg (mL/min): 8829  (Z=8.46)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)  ·  Bubble detachment diameter - Dd (mm): 21.98  (Z=3.56)
+
+  [138]  Paper: Scargiali et al. (2014)   |   Row 1412   |   3 column(s) flagged
+        Gas flow rate - Qg (mL/min): 9549  (Z=9.18)  ·  Orifice diameter - DO (mm): 7  (Z=3.09)  ·  Bubble detachment diameter - Dd (mm): 22.64  (Z=3.72)
+
+  [139]  Paper: Davidson and Schüler (1960)   |   Row 1574   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 20.48  (Z=3.20)
+
+  [140]  Paper: Davidson and Schüler (1960)   |   Row 1575   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 21.22  (Z=3.38)
+
+  [141]  Paper: Davidson and Schüler (1960)   |   Row 1576   |   2 column(s) flagged
+        Gas flow rate - Qg (mL/min): 3420  (Z=3.05)  ·  Bubble detachment diameter - Dd (mm): 22.29  (Z=3.63)
+
+  [142]  Paper: Davidson and Schüler (1960)   |   Row 1578   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 19.86  (Z=3.05)
+
+  [143]  Paper: Davidson and Schüler (1960)   |   Row 1579   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 20.63  (Z=3.24)
+
+  [144]  Paper: Davidson and Schüler (1960)   |   Row 1581   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 20.18  (Z=3.13)
+
+  [145]  Paper: Davidson and Schüler (1960)   |   Row 1582   |   1 column(s) flagged
+        Bubble detachment diameter - Dd (mm): 20.78  (Z=3.27)
+
+  [146]  Paper: Tsuge and Hibino (1983)   |   Row 1731   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [147]  Paper: Tsuge and Hibino (1983)   |   Row 1732   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [148]  Paper: Tsuge and Hibino (1983)   |   Row 1733   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [149]  Paper: Tsuge and Hibino (1983)   |   Row 1734   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [150]  Paper: Tsuge and Hibino (1983)   |   Row 1735   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [151]  Paper: Tsuge and Hibino (1983)   |   Row 1736   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [152]  Paper: Tsuge and Hibino (1983)   |   Row 1737   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [153]  Paper: Tsuge and Hibino (1983)   |   Row 1738   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [154]  Paper: Tsuge and Hibino (1983)   |   Row 1739   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [155]  Paper: Tsuge and Hibino (1983)   |   Row 1740   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [156]  Paper: Tsuge and Hibino (1983)   |   Row 1741   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [157]  Paper: Tsuge and Hibino (1983)   |   Row 1742   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [158]  Paper: Tsuge and Hibino (1983)   |   Row 1743   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [159]  Paper: Tsuge and Hibino (1983)   |   Row 1744   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [160]  Paper: Tsuge and Hibino (1983)   |   Row 1745   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [161]  Paper: Tsuge and Hibino (1983)   |   Row 1746   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [162]  Paper: Tsuge and Hibino (1983)   |   Row 1747   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [163]  Paper: Tsuge and Hibino (1983)   |   Row 1748   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [164]  Paper: Tsuge and Hibino (1983)   |   Row 1749   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [165]  Paper: Tsuge and Hibino (1983)   |   Row 1750   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [166]  Paper: Tsuge and Hibino (1983)   |   Row 1751   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [167]  Paper: Tsuge and Hibino (1983)   |   Row 1752   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [168]  Paper: Tsuge and Hibino (1983)   |   Row 1753   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [169]  Paper: Tsuge and Hibino (1983)   |   Row 1754   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [170]  Paper: Tsuge and Hibino (1983)   |   Row 1755   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [171]  Paper: Tsuge and Hibino (1983)   |   Row 1756   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [172]  Paper: Tsuge and Hibino (1983)   |   Row 1757   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [173]  Paper: Tsuge and Hibino (1983)   |   Row 1758   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [174]  Paper: Tsuge and Hibino (1983)   |   Row 1759   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [175]  Paper: Tsuge and Hibino (1983)   |   Row 1760   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [176]  Paper: Tsuge and Hibino (1983)   |   Row 1761   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [177]  Paper: Tsuge and Hibino (1983)   |   Row 1762   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [178]  Paper: Tsuge and Hibino (1983)   |   Row 1763   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [179]  Paper: Tsuge and Hibino (1983)   |   Row 1764   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [180]  Paper: Tsuge and Hibino (1983)   |   Row 1765   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [181]  Paper: Tsuge and Hibino (1983)   |   Row 1766   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [182]  Paper: Tsuge and Hibino (1983)   |   Row 1767   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [183]  Paper: Tsuge and Hibino (1983)   |   Row 1768   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [184]  Paper: Tsuge and Hibino (1983)   |   Row 1769   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [185]  Paper: Tsuge and Hibino (1983)   |   Row 1770   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [186]  Paper: Tsuge and Hibino (1983)   |   Row 1771   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [187]  Paper: Tsuge and Hibino (1983)   |   Row 1772   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [188]  Paper: Tsuge and Hibino (1983)   |   Row 1773   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [189]  Paper: Tsuge and Hibino (1983)   |   Row 1774   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [190]  Paper: Tsuge and Hibino (1983)   |   Row 1775   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [191]  Paper: Tsuge and Hibino (1983)   |   Row 1776   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [192]  Paper: Tsuge and Hibino (1983)   |   Row 1777   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [193]  Paper: Tsuge and Hibino (1983)   |   Row 1778   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [194]  Paper: Tsuge and Hibino (1983)   |   Row 1779   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [195]  Paper: Tsuge and Hibino (1983)   |   Row 1780   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [196]  Paper: Tsuge and Hibino (1983)   |   Row 1781   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [197]  Paper: Tsuge and Hibino (1983)   |   Row 1782   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [198]  Paper: Tsuge and Hibino (1983)   |   Row 1783   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [199]  Paper: Tsuge and Hibino (1983)   |   Row 1784   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [200]  Paper: Tsuge and Hibino (1983)   |   Row 1785   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [201]  Paper: Tsuge and Hibino (1983)   |   Row 1786   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [202]  Paper: Tsuge and Hibino (1983)   |   Row 1787   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [203]  Paper: Tsuge and Hibino (1983)   |   Row 1788   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [204]  Paper: Tsuge and Hibino (1983)   |   Row 1789   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [205]  Paper: Tsuge and Hibino (1983)   |   Row 1790   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [206]  Paper: Tsuge and Hibino (1983)   |   Row 1791   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [207]  Paper: Tsuge and Hibino (1983)   |   Row 1792   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [208]  Paper: Tsuge and Hibino (1983)   |   Row 1793   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [209]  Paper: Tsuge and Hibino (1983)   |   Row 1794   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [210]  Paper: Tsuge and Hibino (1983)   |   Row 1795   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [211]  Paper: Tsuge and Hibino (1983)   |   Row 1796   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [212]  Paper: Tsuge and Hibino (1983)   |   Row 1797   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [213]  Paper: Tsuge and Hibino (1983)   |   Row 1798   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [214]  Paper: Tsuge and Hibino (1983)   |   Row 1799   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [215]  Paper: Tsuge and Hibino (1983)   |   Row 1800   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [216]  Paper: Tsuge and Hibino (1983)   |   Row 1801   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [217]  Paper: Tsuge and Hibino (1983)   |   Row 1802   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [218]  Paper: Tsuge and Hibino (1983)   |   Row 1803   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [219]  Paper: Tsuge and Hibino (1983)   |   Row 1804   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [220]  Paper: Tsuge and Hibino (1983)   |   Row 1805   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [221]  Paper: Tsuge and Hibino (1983)   |   Row 1806   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [222]  Paper: Tsuge and Hibino (1983)   |   Row 1807   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [223]  Paper: Tsuge and Hibino (1983)   |   Row 1808   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [224]  Paper: Tsuge and Hibino (1983)   |   Row 1809   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [225]  Paper: Tsuge and Hibino (1983)   |   Row 1810   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [226]  Paper: Tsuge and Hibino (1983)   |   Row 1811   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [227]  Paper: Tsuge and Hibino (1983)   |   Row 1812   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [228]  Paper: Tsuge and Hibino (1983)   |   Row 1813   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [229]  Paper: Tsuge and Hibino (1983)   |   Row 1814   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [230]  Paper: Tsuge and Hibino (1983)   |   Row 1815   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [231]  Paper: Tsuge and Hibino (1983)   |   Row 1816   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [232]  Paper: Tsuge and Hibino (1983)   |   Row 1817   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [233]  Paper: Tsuge and Hibino (1983)   |   Row 1818   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [234]  Paper: Tsuge and Hibino (1983)   |   Row 1819   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [235]  Paper: Tsuge and Hibino (1983)   |   Row 1820   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [236]  Paper: Tsuge and Hibino (1983)   |   Row 1821   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [237]  Paper: Tsuge and Hibino (1983)   |   Row 1822   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [238]  Paper: Tsuge and Hibino (1983)   |   Row 1823   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [239]  Paper: Tsuge and Hibino (1983)   |   Row 1824   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [240]  Paper: Tsuge and Hibino (1983)   |   Row 1825   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [241]  Paper: Tsuge and Hibino (1983)   |   Row 1826   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [242]  Paper: Tsuge and Hibino (1983)   |   Row 1827   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [243]  Paper: Tsuge and Hibino (1983)   |   Row 1828   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [244]  Paper: Tsuge and Hibino (1983)   |   Row 1829   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [245]  Paper: Tsuge and Hibino (1983)   |   Row 1830   |   1 column(s) flagged
+        Liquid viscosity - μl (Pa⋅s): 48.5  (Z=5.02)
+
+  [246]  Paper: Lee et al. (2021)   |   Row 2136   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [247]  Paper: Lee et al. (2021)   |   Row 2137   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [248]  Paper: Lee et al. (2021)   |   Row 2138   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [249]  Paper: Lee et al. (2021)   |   Row 2139   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [250]  Paper: Lee et al. (2021)   |   Row 2140   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [251]  Paper: Lee et al. (2021)   |   Row 2141   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [252]  Paper: Lee et al. (2021)   |   Row 2142   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [253]  Paper: Lee et al. (2021)   |   Row 2143   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [254]  Paper: Lee et al. (2021)   |   Row 2144   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [255]  Paper: Lee et al. (2021)   |   Row 2145   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [256]  Paper: Lee et al. (2021)   |   Row 2146   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [257]  Paper: Lee et al. (2021)   |   Row 2147   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [258]  Paper: Lee et al. (2021)   |   Row 2148   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [259]  Paper: Lee et al. (2021)   |   Row 2149   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [260]  Paper: Lee et al. (2021)   |   Row 2150   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [261]  Paper: Lee et al. (2021)   |   Row 2151   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [262]  Paper: Lee et al. (2021)   |   Row 2152   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [263]  Paper: Lee et al. (2021)   |   Row 2153   |   1 column(s) flagged
+        Orifice diameter - DO (mm): 10  (Z=4.87)
+
+  [264]  Paper: Tian (2019)   |   Row 2417   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [265]  Paper: Tian (2019)   |   Row 2418   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [266]  Paper: Tian (2019)   |   Row 2419   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [267]  Paper: Tian (2019)   |   Row 2420   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [268]  Paper: Tian (2019)   |   Row 2421   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [269]  Paper: Tian (2019)   |   Row 2422   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [270]  Paper: Tian (2019)   |   Row 2423   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [271]  Paper: Tian (2019)   |   Row 2424   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [272]  Paper: Tian (2019)   |   Row 2425   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [273]  Paper: Tian (2019)   |   Row 2426   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [274]  Paper: Tian (2019)   |   Row 2427   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [275]  Paper: Tian (2019)   |   Row 2428   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [276]  Paper: Tian (2019)   |   Row 2429   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [277]  Paper: Tian (2019)   |   Row 2430   |   1 column(s) flagged
+        Temperature - T (℃): 199.8  (Z=5.56)
+
+  [278]  Paper: Tian (2019)   |   Row 2437   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [279]  Paper: Tian (2019)   |   Row 2438   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [280]  Paper: Tian (2019)   |   Row 2439   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [281]  Paper: Tian (2019)   |   Row 2440   |   1 column(s) flagged
+        Temperature - T (℃): 199.9  (Z=5.56)
+
+  [282]  Paper: Tian (2019)   |   Row 2441   |   1 column(s) flagged
+        Temperature - T (℃): 199.9  (Z=5.56)
+
+  [283]  Paper: Tian (2019)   |   Row 2442   |   1 column(s) flagged
+        Temperature - T (℃): 199.9  (Z=5.56)
+
+  [284]  Paper: Tian (2019)   |   Row 2446   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [285]  Paper: Tian (2019)   |   Row 2447   |   1 column(s) flagged
+        Temperature - T (℃): 199.9  (Z=5.56)
+
+  [286]  Paper: Tian (2019)   |   Row 2454   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [287]  Paper: Tian (2019)   |   Row 2455   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [288]  Paper: Tian (2019)   |   Row 2456   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [289]  Paper: Tian (2019)   |   Row 2457   |   1 column(s) flagged
+        Temperature - T (℃): 199.9  (Z=5.56)
+
+  [290]  Paper: Tian (2019)   |   Row 2458   |   1 column(s) flagged
+        Temperature - T (℃): 199.9  (Z=5.56)
+
+  [291]  Paper: Tian (2019)   |   Row 2459   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [292]  Paper: Tian (2019)   |   Row 2466   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [293]  Paper: Tian (2019)   |   Row 2467   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [294]  Paper: Tian (2019)   |   Row 2468   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [295]  Paper: Tian (2019)   |   Row 2469   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [296]  Paper: Tian (2019)   |   Row 2470   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [297]  Paper: Tian (2019)   |   Row 2471   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [298]  Paper: Tian (2019)   |   Row 2472   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [299]  Paper: Tian (2019)   |   Row 2475   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [300]  Paper: Tian (2019)   |   Row 2476   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [301]  Paper: Tian (2019)   |   Row 2480   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [302]  Paper: Tian (2019)   |   Row 2481   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [303]  Paper: Tian (2019)   |   Row 2486   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [304]  Paper: Tian (2019)   |   Row 2487   |   1 column(s) flagged
+        Temperature - T (℃): 149.9  (Z=3.93)
+
+  [305]  Paper: Tian (2019)   |   Row 2488   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [306]  Paper: Tian (2019)   |   Row 2489   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [307]  Paper: Tian (2019)   |   Row 2517   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [308]  Paper: Tian (2019)   |   Row 2518   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [309]  Paper: Tian (2019)   |   Row 2519   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [310]  Paper: Tian (2019)   |   Row 2520   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [311]  Paper: Tian (2019)   |   Row 2521   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [312]  Paper: Tian (2019)   |   Row 2522   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [313]  Paper: Tian (2019)   |   Row 2523   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [314]  Paper: Tian (2019)   |   Row 2524   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [315]  Paper: Tian (2019)   |   Row 2525   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [316]  Paper: Tian (2019)   |   Row 2526   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [317]  Paper: Tian (2019)   |   Row 2527   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [318]  Paper: Tian (2019)   |   Row 2528   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [319]  Paper: Tian (2019)   |   Row 2529   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [320]  Paper: Tian (2019)   |   Row 2530   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [321]  Paper: Tian (2019)   |   Row 2531   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [322]  Paper: Tian (2019)   |   Row 2532   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [323]  Paper: Tian (2019)   |   Row 2533   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [324]  Paper: Tian (2019)   |   Row 2534   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [325]  Paper: Tian (2019)   |   Row 2535   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [326]  Paper: Tian (2019)   |   Row 2536   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [327]  Paper: Tian (2019)   |   Row 2537   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [328]  Paper: Tian (2019)   |   Row 2538   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [329]  Paper: Tian (2019)   |   Row 2539   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [330]  Paper: Tian (2019)   |   Row 2540   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [331]  Paper: Tian (2019)   |   Row 2541   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [332]  Paper: Tian (2019)   |   Row 2542   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [333]  Paper: Tian (2019)   |   Row 2543   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [334]  Paper: Tian (2019)   |   Row 2544   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [335]  Paper: Tian (2019)   |   Row 2545   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [336]  Paper: Tian (2019)   |   Row 2546   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [337]  Paper: Tian (2019)   |   Row 2547   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [338]  Paper: Tian (2019)   |   Row 2548   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [339]  Paper: Tian (2019)   |   Row 2549   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [340]  Paper: Tian (2019)   |   Row 2550   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [341]  Paper: Tian (2019)   |   Row 2551   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [342]  Paper: Tian (2019)   |   Row 2552   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [343]  Paper: Tian (2019)   |   Row 2553   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [344]  Paper: Tian (2019)   |   Row 2554   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [345]  Paper: Tian (2019)   |   Row 2555   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [346]  Paper: Tian (2019)   |   Row 2556   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [347]  Paper: Tian (2019)   |   Row 2557   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [348]  Paper: Tian (2019)   |   Row 2558   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+  [349]  Paper: Tian (2019)   |   Row 2559   |   2 column(s) flagged
+        Liquid density - ρl (kg/m3): 629.3  (Z=3.07)  ·  Temperature - T (℃): 199.9  (Z=5.56)
+
+================================================================================

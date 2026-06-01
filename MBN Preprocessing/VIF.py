@@ -36,18 +36,24 @@ def compute_vif(df, exclude_cols=None):
 
 def remove_high_vif(df, threshold=5, protect_cols=None, exclude_cols=None):
     """
-    Iteratively remove VIF features with user input each round.
+    Iteratively show VIF table and ask the user what to do each round.
 
-    After printing the VIF table the user is asked which column to drop.
-    The loop stops automatically when all features are below `threshold`,
-    or immediately if the user types 'done' or 'stop'.
+    - High VIF features are flagged but the user decides whether to drop anything.
+    - Input options each round:
+        • A number (1, 2, 3 …) → drop the feature at that row in the table
+        • A column name        → drop that specific column
+        • 'keep'               → proceed to the next iteration without dropping
+        • 'done' / 'stop'      → exit immediately, keep current state
+
+    The loop ends automatically when all features are below `threshold` OR
+    the user chooses to stop.
 
     Parameters:
         df (pd.DataFrame)
-        threshold (float)  : VIF cutoff — default 5
+        threshold (float)  : VIF warning threshold — default 5
         protect_cols (list): columns never to drop (e.g. target / ID)
-        exclude_cols (list): one-hot encoded columns — excluded from VIF
-                             calculation and never dropped
+        exclude_cols (list): one-hot encoded columns — excluded from VIF,
+                             never dropped
 
     Returns:
         df_final (pd.DataFrame)
@@ -67,7 +73,7 @@ def remove_high_vif(df, threshold=5, protect_cols=None, exclude_cols=None):
     while True:
         iteration += 1
 
-        # Build numeric subset, excluding encoded & protected cols
+        # Build numeric subset excluding protected/encoded cols
         numeric_X = (
             X.select_dtypes(include=[np.number])
              .drop(columns=list(never_drop), errors='ignore')
@@ -88,48 +94,71 @@ def remove_high_vif(df, threshold=5, protect_cols=None, exclude_cols=None):
                .reset_index(drop=True)
         )
 
+        # Add 1-based index column for easy reference
+        vif.index = vif.index + 1
+        vif.index.name = "#"
+
         print(f"\n{'=' * 50}")
         print(f"  VIF Iteration {iteration}")
         print(f"{'=' * 50}")
-        print(vif.to_string(index=False))
+        print(vif.to_string())
 
         max_vif = vif["VIF"].iloc[0]
+        above = vif[vif["VIF"] > threshold]
 
-        # Stop automatically if everything is already below threshold
-        if max_vif <= threshold:
-            print(f"\n  ✔ All features have VIF ≤ {threshold}. No more columns to drop.")
-            break
+        if not above.empty:
+            print(f"\n  ⚠ {len(above)} feature(s) have VIF > {threshold}:")
+            for idx, row in above.iterrows():
+                print(f"    [{idx}] {row['Feature']}  (VIF = {row['VIF']:.4f})")
+        else:
+            print(f"\n  ✔ All features have VIF ≤ {threshold}.")
 
-        # List features above threshold (candidates to drop)
-        above = vif[vif["VIF"] > threshold]["Feature"].tolist()
-        print(f"\n  Features above threshold (VIF > {threshold}): {above}")
-        print(f"  Suggested (highest VIF): '{vif['Feature'].iloc[0]}'  (VIF = {max_vif:.4f})")
+        print("\n  Options:")
+        print("    • Enter a number (e.g. '1') to drop that row's feature")
+        print("    • Enter a column name to drop it directly")
+        print("    • 'done'/'stop' → exit VIF removal now")
 
-        # Ask the user which column to drop
+        # User input loop
         while True:
-            user_input = input(
-                "\n  Enter column name to drop (or 'done'/'stop' to finish early): "
-            ).strip()
+            user_input = input("\n  Your choice: ").strip()
 
+            # Exit early
             if user_input.lower() in ("done", "stop"):
-                print("  Stopping VIF removal at user request.")
+                print("  Exiting VIF removal.")
                 print("\n" + "=" * 50)
                 print(f"Total features dropped by VIF: {len(dropped_features)}")
                 print(dropped_features)
                 return X, dropped_features
 
+            # Numeric shortcut — resolve to column name
+            if user_input.isdigit():
+                row_num = int(user_input)
+                if row_num in vif.index:
+                    col_to_drop = vif.loc[row_num, "Feature"]
+                    if col_to_drop in never_drop:
+                        print(f"  ✗ '{col_to_drop}' is protected and cannot be dropped.")
+                        continue
+                    print(f"\n  ➜ Dropping [{row_num}] '{col_to_drop}'  (VIF = {vif.loc[row_num, 'VIF']:.4f})")
+                    dropped_features.append(col_to_drop)
+                    X = X.drop(columns=[col_to_drop])
+                    break
+                else:
+                    print(f"  ✗ No row #{row_num} in the table. Valid range: 1–{len(vif)}.")
+                    continue
+
+            # Column name input
             if user_input in vif["Feature"].values:
                 if user_input in never_drop:
-                    print(f"  ✗ '{user_input}' is protected and cannot be dropped. Choose another.")
-                else:
-                    break  # valid choice
+                    print(f"  ✗ '{user_input}' is protected and cannot be dropped.")
+                    continue
+                row_num = vif[vif["Feature"] == user_input].index[0]
+                print(f"\n  ➜ Dropping '{user_input}'  (VIF = {vif.loc[row_num, 'VIF']:.4f})")
+                dropped_features.append(user_input)
+                X = X.drop(columns=[user_input])
+                break
             else:
-                print(f"  ✗ '{user_input}' not found in the current feature list.")
-                print(f"    Available: {vif['Feature'].tolist()}")
-
-        print(f"\n  ➜ Dropping '{user_input}'")
-        dropped_features.append(user_input)
-        X = X.drop(columns=[user_input])
+                print(f"  ✗ '{user_input}' not recognised.")
+                print(f"    Enter a number (1–{len(vif)}), a column name, 'keep', 'done', or 'stop'.")
 
     print("\n" + "=" * 50)
     print(f"Total features dropped by VIF: {len(dropped_features)}")
@@ -151,7 +180,7 @@ def run_vif_pipeline(
     Full VIF pipeline:
       1. Compute & print initial VIF (excluding encoded columns)
       2. Save initial VIF report
-      3. Interactive iterative removal — user picks column to drop each round
+      3. Interactive iterative removal — user controls every drop
       4. Save dropped-columns log
       5. Save final dataset (encoded columns preserved)
 
@@ -161,9 +190,12 @@ def run_vif_pipeline(
     """
     print("\n--- Initial VIF values ---")
     initial_vif = compute_vif(df, exclude_cols=encoded_cols)
-    print(initial_vif.to_string(index=False))
+    # Show with 1-based index
+    initial_vif.index = initial_vif.index + 1
+    initial_vif.index.name = "#"
+    print(initial_vif.to_string())
 
-    initial_vif.to_excel(vif_output_path, index=False)
+    initial_vif.to_excel(vif_output_path)
     print(f"\nInitial VIF results saved as '{vif_output_path}'")
 
     df_final, dropped_features = remove_high_vif(
