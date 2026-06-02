@@ -25,6 +25,11 @@ def dated(stage, label, ext="xlsx"):
     return f"Step {stage} — {label} ({timestamp}).{ext}"
 
 
+def dated_fig(label, ext="png"):
+    """Return a timestamped figure filename."""
+    return f"Fig — {label} ({timestamp}).{ext}"
+
+
 # =========================
 # Pipeline (Steps 1-4)
 # =========================
@@ -36,7 +41,9 @@ if __name__ == "__main__":
     print("=" * 50)
     df_cleaned, encoded_cols = run_missingness_pipeline(
         file_path=FILE_PATH,
-        output_path=dated("01", "Cleaned Dataset")
+        output_path=dated("01", "Cleaned Dataset"),
+        encoded_output_path=dated("01", "Cleaned Dataset (Encoded)"),
+        heatmap_path=dated_fig("Missingness Heatmap"),
     )
     print(f"\nEncoded columns carried forward: {encoded_cols}")
 
@@ -48,6 +55,7 @@ if __name__ == "__main__":
         df=df_cleaned,
         encoded_cols=encoded_cols,
         output_path=dated("02", "Reduced After Correlation"),
+        heatmap_path=dated_fig("Spearman Heatmap"),
         threshold=0.8
     )
 
@@ -76,7 +84,8 @@ if __name__ == "__main__":
         save_plots=True,
         output_path=dated("05", "Final No Outliers"),
         removed_output_path=dated("05", "Removed Outliers"),
-        report_path=dated("05", "Outliers Report", ext="txt")
+        report_path=dated("05", "Outliers Report", ext="txt"),
+        qqplot_folder=f"qqplots ({timestamp})",
     )
 
     print("\n" + "=" * 50)

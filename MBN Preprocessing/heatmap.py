@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.impute import KNNImputer
+from datetime import datetime
 
 
 def load_data(file_path):
@@ -56,31 +57,33 @@ def drop_high_missing_cols(df, missing_percent, threshold=50):
     return df_cleaned
 
 
-def encode_categorical(df, protect_col="Paper"):
+def encode_categorical(df, protect_col="Paper", gas_col="Gas Type"):
     """
     One-hot encode all categorical columns except `protect_col`.
-    Also convert boolean columns (True/False) to 1/0.
+
+    For the Gas Type column (or whatever `gas_col` is named), all known
+    categories (Air, CO2, He, Ar, N2) are explicitly included so that
+    every category gets its own column even if some are absent in the data.
+
+    Also converts boolean columns (True/False) to 1/0.
 
     Returns:
         df_encoded (pd.DataFrame): dataframe with encoded columns appended
         encoded_cols (list): names of the newly created one-hot columns
     """
+    GAS_CATEGORIES = ["Air", "CO2", "He", "Ar", "N2"]
 
     # --- Convert boolean columns to 0/1 ---
-    # Case 1: actual bool dtype
     bool_cols = df.select_dtypes(include=['bool']).columns.tolist()
-
-    # Case 2: object columns where every non-null cell is True/False (any form)
     object_bool_cols = [
         col for col in df.select_dtypes(include='object').columns
         if df[col].dropna().isin([True, False, 'True', 'False']).all()
     ]
-
     all_bool_cols = list(set(bool_cols + object_bool_cols))
-
     for col in all_bool_cols:
-        df[col] = df[col].apply(lambda x: 1 if x in (True, 'True') else (0 if x in (False, 'False') else x))
-
+        df[col] = df[col].apply(
+            lambda x: 1 if x in (True, 'True') else (0 if x in (False, 'False') else x)
+        )
     print("\nBoolean columns converted to 0/1.")
 
     # --- Identify categorical columns ---
@@ -89,24 +92,45 @@ def encode_categorical(df, protect_col="Paper"):
           .select_dtypes(include=['object', 'category'])
           .columns.tolist()
     )
-
     print("\nCategorical columns to encode:")
     print(categorical_cols)
 
-    # --- One-hot encoding ---
     cols_before = set(df.columns)
-    df_encoded = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
+
+    # --- Handle Gas Type with explicit categories ---
+    if gas_col in categorical_cols:
+        # Build a CategoricalDtype that always includes all known gas categories
+        existing_gas_values = df[gas_col].dropna().unique().tolist()
+        all_gas_cats = list(dict.fromkeys(GAS_CATEGORIES + [
+            v for v in existing_gas_values if v not in GAS_CATEGORIES
+        ]))
+        df[gas_col] = pd.Categorical(df[gas_col], categories=all_gas_cats)
+        print(f"\nGas Type categories enforced: {all_gas_cats}")
+
+    # --- One-hot encoding (drop_first=False to keep ALL categories) ---
+    df_encoded = pd.get_dummies(df, columns=categorical_cols, drop_first=False)
+
+    # drop_first=False means we get all dummies; manually drop the first dummy
+    # for non-gas columns to avoid multicollinearity, but keep ALL gas dummies.
+    non_gas_cats = [c for c in categorical_cols if c != gas_col]
+    for col in non_gas_cats:
+        # Find the encoded columns for this original column
+        col_dummies = [c for c in df_encoded.columns if c.startswith(f"{col}_")]
+        if col_dummies:
+            df_encoded = df_encoded.drop(columns=[col_dummies[0]])
+            print(f"  Dropped first dummy for '{col}': {col_dummies[0]}")
 
     encoded_cols = [c for c in df_encoded.columns if c not in cols_before]
 
-    # ✅ get_dummies produces bool dtype — convert to int immediately
+    # get_dummies produces bool dtype — convert to int
     df_encoded[encoded_cols] = df_encoded[encoded_cols].astype(int)
 
-    print(f"One-hot encoded columns created ({len(encoded_cols)}):")
+    print(f"\nOne-hot encoded columns created ({len(encoded_cols)}):")
     print(encoded_cols)
     print("Shape after encoding:", df_encoded.shape)
 
     return df_encoded, encoded_cols
+
 
 def knn_impute(df, n_neighbors=5):
     """Impute missing values in numeric columns using KNN."""
@@ -121,28 +145,48 @@ def knn_impute(df, n_neighbors=5):
     return df
 
 
-def run_missingness_pipeline(file_path, output_path="Cleaned_dataset Task 2.xlsx"):
+def run_missingness_pipeline(
+    file_path,
+    output_path="Cleaned_dataset Task 2.xlsx",
+    encoded_output_path=None,
+    heatmap_path="missingness_heatmap.png",
+):
     """
     Full missingness pipeline:
       1. Load data
       2. Report & visualise missing values
       3. Drop high-missing columns (>50%)
       4. One-hot encode categorical columns (except 'Paper')
+         → Save intermediate encoded dataset
       5. KNN imputation on numeric columns
-      6. Save cleaned dataset
+         → Save final cleaned dataset
+
+    The `output_path` receives the fully imputed dataset.
+    The `encoded_output_path` (optional) receives the post-encoding,
+    pre-imputation dataset.  If not supplied it is derived from `output_path`
+    by inserting ' (Encoded)' before the extension.
 
     Returns:
         df_cleaned   (pd.DataFrame) : fully cleaned & encoded dataframe
         encoded_cols (list)         : names of one-hot encoded columns
-                                      (passed downstream so other steps can ignore them)
     """
+    # Derive encoded intermediate path if not provided
+    if encoded_output_path is None:
+        base, ext = output_path.rsplit(".", 1)
+        encoded_output_path = f"{base} (Encoded).{ext}"
+
     df = load_data(file_path)
     missing_percent = report_missing(df)
-    plot_missingness_heatmap(df)
-    df_cleaned = drop_high_missing_cols(df, missing_percent)
-    df_cleaned, encoded_cols = encode_categorical(df_cleaned)
-    df_cleaned = knn_impute(df_cleaned)
+    plot_missingness_heatmap(df, save_path=heatmap_path)
+    df_dropped = drop_high_missing_cols(df, missing_percent)
 
+    # Step 1a: One-hot encoding → save intermediate
+    df_encoded, encoded_cols = encode_categorical(df_dropped)
+    df_encoded.to_excel(encoded_output_path, index=False)
+    print(f"\nEncoded (pre-imputation) dataset saved as '{encoded_output_path}'")
+
+    # Step 1b: KNN imputation → save final cleaned dataset
+    df_cleaned = knn_impute(df_encoded.copy())
     df_cleaned.to_excel(output_path, index=False)
     print(f"\nDataset saved as '{output_path}'")
 

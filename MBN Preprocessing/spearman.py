@@ -69,7 +69,7 @@ def drop_high_correlation_cols(df, corr_matrix, threshold=0.8):
     return df_reduced
 
 
-def run_spearman_pipeline(df, encoded_cols=None, output_path="Reduced_dataset_after_correlation.xlsx", threshold=0.8):
+def run_spearman_pipeline(df, encoded_cols=None, output_path="Reduced_dataset_after_correlation.xlsx", threshold=0.8, heatmap_path="spearman_heatmap.png"):
     """
     Full Spearman correlation pipeline:
       1. Compute Spearman correlation (ignoring encoded columns)
@@ -82,12 +82,13 @@ def run_spearman_pipeline(df, encoded_cols=None, output_path="Reduced_dataset_af
         encoded_cols (list): one-hot column names to exclude from analysis
         output_path (str)
         threshold (float)
+        heatmap_path (str): path/filename for the saved heatmap image
 
     Returns:
         df_reduced (pd.DataFrame)
     """
     corr_matrix = compute_spearman_correlation(df, exclude_cols=encoded_cols)
-    plot_spearman_heatmap(corr_matrix)
+    plot_spearman_heatmap(corr_matrix, save_path=heatmap_path)
     df_reduced = drop_high_correlation_cols(df, corr_matrix, threshold=threshold)
 
     df_reduced.to_excel(output_path, index=False)

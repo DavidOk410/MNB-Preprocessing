@@ -1,18 +1,17 @@
 Pipeline Log
-Started  :  2026-06-01 13:13:00
+Started  :  2026-06-02 18:05:37
 ============================================================
 
 Should I delete output files of the previous runs? Type yes/no: Delete previous outputs: yes
-Could not delete Step 00 — Pipeline Log (06.01 13-13).txt: [WinError 32] The process cannot access the file because it is being used by another process: 'Step 00 — Pipeline Log (06.01 13-13).txt'
+Could not delete Step 00 — Pipeline Log (06.02 18-05).txt: [WinError 32] The process cannot access the file because it is being used by another process: 'Step 00 — Pipeline Log (06.02 18-05).txt'
 
 Deleted previous output files:
-  - Step 01 — Cleaned Dataset (06.01 12-20).xlsx
-  - Step 02 — Reduced After Correlation (06.01 12-20).xlsx
-  - Step 03 — VIF Results (06.01 12-20).xlsx
-  - Step 03 — Dropped VIF Columns (06.01 12-20).xlsx
-  - Step 04 — Dataset After VIF (06.01 12-20).xlsx
-  - Step 05 — Removed Outliers (06.01 12-20).xlsx
-  - Step 06 — Scaled Dataset (06.01 12-20).xlsx
+  - Step 01 — Cleaned Dataset (06.02 17-07).xlsx
+  - Step 02 — Reduced After Correlation (06.02 17-07).xlsx
+  - Step 03 — VIF Results (06.02 17-07).xlsx
+  - Step 03 — Dropped VIF Columns (06.02 17-07).xlsx
+  - Step 04 — Dataset After VIF (06.02 17-07).xlsx
+  - Step 00 — Pipeline Log (06.02 17-07).txt
 
 ==================================================
 STEP 1: Missingness Heatmap, Encoding & Imputation
@@ -34,7 +33,7 @@ Gas type                                          0   0.000000
 Gas density - ρg (kg/m3)                       1548  57.761194
 Bubble detachment diameter - Dd (mm)              0   0.000000
 
-Missingness heatmap saved as 'missingness_heatmap.png'
+Missingness heatmap saved as 'Fig — Missingness Heatmap (06.02 18-05).png'
 
 Dropped columns (>50% missing):
 ['Liquid velocity - Ul (m/s)', 'Gas density - ρg (kg/m3)']
@@ -44,9 +43,13 @@ Boolean columns converted to 0/1.
 
 Categorical columns to encode:
 ['Gas type']
+  Dropped first dummy for 'Gas type': Gas type_Air
+
 One-hot encoded columns created (4):
 ['Gas type_Argon', 'Gas type_Carbon dioxide', 'Gas type_Helium', 'Gas type_Nitrogen']
 Shape after encoding: (2680, 12)
+
+Encoded (pre-imputation) dataset saved as 'Step 01 — Cleaned Dataset (Encoded) (06.02 18-05).xlsx'
 
 Missing values AFTER imputation:
 Paper                                   0
@@ -65,7 +68,7 @@ dtype: int64
 
 Shape after imputation: (2680, 12)
 
-Dataset saved as 'Step 01 — Cleaned Dataset (06.01 13-13).xlsx'
+Dataset saved as 'Step 01 — Cleaned Dataset (06.02 18-05).xlsx'
 
 Encoded columns carried forward: ['Gas type_Argon', 'Gas type_Carbon dioxide', 'Gas type_Helium', 'Gas type_Nitrogen']
 
@@ -75,13 +78,13 @@ STEP 2: Spearman Correlation
 
 Computing Spearman correlation on 7 columns (excluded 4 encoded columns).
 
-Spearman heatmap saved as 'spearman_heatmap.png'
+Spearman heatmap saved as 'Fig — Spearman Heatmap (06.02 18-05).png'
 
 Highly correlated columns to drop (|R| > 0.8):
 []
 Shape after correlation filtering: (2680, 12)
 
-Reduced dataset saved as 'Step 02 — Reduced After Correlation (06.01 13-13).xlsx'
+Reduced dataset saved as 'Step 02 — Reduced After Correlation (06.02 18-05).xlsx'
 
 ==================================================
 STEP 3: VIF & Multicollinearity Filtering
@@ -98,7 +101,7 @@ STEP 3: VIF & Multicollinearity Filtering
 6            Orifice diameter - DO (mm)  1.466273
 7          Liquid viscosity - μl (Pa⋅s)  1.124190
 
-Initial VIF results saved as 'Step 03 — VIF Results (06.01 13-13).xlsx'
+Initial VIF results saved as 'Step 03 — VIF Results (06.02 18-05).xlsx'
 
 ==================================================
   VIF Iteration 1
@@ -125,20 +128,9 @@ Initial VIF results saved as 'Step 03 — VIF Results (06.01 13-13).xlsx'
 ==================================================
 Total features dropped by VIF: 0
 []
-Dropped VIF columns log saved as 'Step 03 — Dropped VIF Columns (06.01 13-13).xlsx'
-Final dataset saved as 'Step 04 — Dataset After VIF (06.01 13-13).xlsx'
+Dropped VIF columns log saved as 'Step 03 — Dropped VIF Columns (06.02 18-05).xlsx'
+Final dataset saved as 'Step 04 — Dataset After VIF (06.02 18-05).xlsx'
 Final shape after VIF filtering: (2680, 12)
-
-==================================================
-STEP 4: Outlier Detection & Removal
-==================================================
-  Generating Q-Q plots ...
-  Q-Q plots generated for 7 variable(s) — saved in 'qqplots/'
-  Running Z-score outlier removal (threshold = 3) ...
-  Cleaned dataset saved : Step 05 — Final No Outliers (06.01 13-13).xlsx
-  Removed rows saved    : Step 05 — Removed Outliers (06.01 13-13).xlsx
-  Outlier report saved  : Step 05 — Outliers Report (06.01 13-13).txt
-  Rows removed          : 349 (see report for details)
 
 ==================================================
 STEP 4.1: Colorize Categorical Columns
@@ -148,7 +140,7 @@ STEP 4.1: Colorize Categorical Columns
   Colorized column: Gas type_Helium (K)
   Colorized column: Gas type_Nitrogen (L)
 
-Saved colorized file to: Step 05 — Final No Outliers (06.01 13-13).xlsx
+Saved colorized file to: Step 04 — Dataset After VIF (06.02 18-05).xlsx
 
 ==================================================
 STEP 5: Statistical Feature Characteristics
@@ -157,52 +149,18 @@ STEP 5: Statistical Feature Characteristics
 ============================================================
   Statistical Feature Characteristics
 ============================================================
-                                          Mean    Median       Q1        Q3      Min       Max    Variance       SD  Skewness  Kurtosis
-Feature                                                                                                                                
-Gas flow rate - Qg (mL/min)           226.4156  101.5878  49.1236  224.5659   0.1266 3312.6380 136705.9156 369.7376    3.9427   19.8882
-Orifice diameter - DO (mm)              1.5124    1.0800   0.5100    2.0000   0.1300    6.0000      1.7615   1.3272    1.7385    2.7970
-Liquid surface tension - σ (N/m)        0.0659    0.0706   0.0625    0.0728   0.0165    0.0966      0.0003   0.0162   -0.7336    1.6751
-Liquid viscosity - μl (Pa⋅s)            0.3351    0.0235   0.0010    0.3270   0.0003   19.5000      2.2853   1.5117   11.2797  135.0979
-Liquid density - ρl (kg/m3)          1061.0978 1000.0000 998.2000 1201.3400 706.9000 1260.0000  15042.4774 122.6478    0.3600   -0.5739
-Temperature - T (℃)                    24.0461   25.0000  20.0000   25.0000   9.8500  119.8500     70.3593   8.3880    7.7079   69.3034
-Bubble detachment diameter - Dd (mm)    6.3874    5.8100   4.3900    7.6883   0.7100   19.5294      8.6810   2.9464    1.3528    2.7076
+                                          Mean    Median       Q1        Q3      Min        Max    Variance       SD  Skewness  Kurtosis
+Feature                                                                                                                                 
+Gas flow rate - Qg (mL/min)           379.6568  117.1174  50.0000  270.2078   0.1266 12027.6987 997256.8268 998.6275    6.2915   48.9657
+Orifice diameter - DO (mm)              1.7713    1.1200   0.6008    2.0200   0.1300    10.0000      2.8595   1.6910    2.0609    4.7417
+Liquid surface tension - σ (N/m)        0.0640    0.0667   0.0624    0.0720   0.0117     0.0966      0.0003   0.0180   -1.0105    1.7430
+Liquid viscosity - μl (Pa⋅s)            2.1154    0.0449   0.0010    0.3883   0.0003    48.5000     85.4174   9.2422    4.7420   20.7510
+Liquid density - ρl (kg/m3)          1064.4465 1000.0000 998.2000 1214.5000 629.3000  1260.0000  20062.3455 141.6416   -0.3717    0.2801
+Temperature - T (℃)                    29.3815   25.0000  20.0000   25.0000   9.8500   199.8500    940.7104  30.6710    4.9883   23.9017
+Bubble detachment diameter - Dd (mm)    7.1260    6.1125   4.4926    8.4123   0.7100    31.1541     17.4345   4.1755    2.1363    6.1708
 
-Statistical summary saved as 'Step 07 — Statistical Summary (06.01 13-13).xlsx'
+Statistical summary saved as 'Step 05 — Statistical Summary (06.02 18-05).xlsx'
 
 ==================================================
 STEP 6: Standard Scaling & Boxplot
 ==================================================
-  Boxplot saved         : boxplots_scaled.png
-  Scaled dataset saved  : Step 06 — Scaled Dataset (06.01 13-13).xlsx
-  Shape                 : (2331, 12)
-
-==================================================
-PIPELINE COMPLETE
-==================================================
-  Input shape                : (2680, 12)
-  After correlation filter   : (2680, 12)
-  After VIF filter           : (2680, 12)
-  After outlier removal      : (2331, 12)
-  After scaling              : (2331, 12)
-  Outlier rows removed       : 349
-  Encoded columns (kept)     : ['Gas type_Argon', 'Gas type_Carbon dioxide', 'Gas type_Helium', 'Gas type_Nitrogen']
-
-Output files:
-  - Step 00 — Pipeline Log (06.01 13-13).txt
-  - Step 01 — Cleaned Dataset (06.01 13-13).xlsx
-  - Step 02 — Reduced After Correlation (06.01 13-13).xlsx
-  - Step 03 — VIF Results (06.01 13-13).xlsx
-  - Step 03 — Dropped VIF Columns (06.01 13-13).xlsx
-  - Step 04 — Dataset After VIF (06.01 13-13).xlsx
-  - Step 05 — Final No Outliers (06.01 13-13).xlsx
-  - Step 05 — Removed Outliers (06.01 13-13).xlsx
-  - Step 05 — Outliers Report (06.01 13-13).txt
-  - Step 06 — Scaled Dataset (06.01 13-13).xlsx
-  - Step 07 — Statistical Summary (06.01 13-13).xlsx
-  - missingness_heatmap.png
-  - spearman_heatmap.png
-  - boxplots_scaled.png
-  - qqplots/
-
-============================================================
-Finished :  2026-06-01 13:13:14

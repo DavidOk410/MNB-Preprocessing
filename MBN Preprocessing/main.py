@@ -30,6 +30,16 @@ def dated(stage, label, ext="xlsx"):
     return f"Step {stage} — {label} ({timestamp}).{ext}"
 
 
+def dated_fig(label, ext="png"):
+    """
+    Build a timestamped filename for figure/plot outputs.
+
+    Format: Fig — <Label> (<MM.DD HH-MM>).<ext>
+    Example: Fig — Missingness Heatmap (05.26 14-35).png
+    """
+    return f"Fig — {label} ({timestamp}).{ext}"
+
+
 # =========================
 # Logger
 # =========================
@@ -37,20 +47,6 @@ class Logger:
     """
     Tees every byte written to sys.stdout to both the terminal and a .txt
     log file simultaneously.
-
-    After Logger.start() is called, ALL print() calls — including those
-    inside imported modules — are captured automatically, because sys.stdout
-    is replaced with this tee object.  Logger.close() restores sys.stdout.
-
-    Direct log() calls are still available for convenience and behave
-    identically to print().
-
-    Usage:
-        log = Logger("pipeline_log.txt")
-        log.start()               # redirect sys.stdout -> tee
-        log("Some message")       # explicit call (optional, same as print)
-        print("Also captured")    # captured via sys.stdout redirect
-        log.close()               # restore sys.stdout, flush & close file
     """
 
     def __init__(self, path):
@@ -64,36 +60,30 @@ class Logger:
         self._file.flush()
 
     def start(self):
-        """Replace sys.stdout with this tee so all prints are captured."""
         sys.stdout = self
 
     def write(self, text):
-        """Called by Python's print() machinery via sys.stdout."""
         self._terminal.write(text)
         self._terminal.flush()
         self._file.write(text)
         self._file.flush()
 
     def flush(self):
-        """Required by the io protocol."""
         self._terminal.flush()
         self._file.flush()
 
     def __call__(self, *args, **kwargs):
-        """Convenience: log(...) works exactly like print(...)."""
         sep = kwargs.get("sep", " ")
         end = kwargs.get("end", "\n")
         self.write(sep.join(str(a) for a in args) + end)
 
     def close(self):
-        """Append finish timestamp, close file, restore sys.stdout."""
         sys.stdout = self._terminal
         self._file.write(
             "\n" + "=" * 60 + "\n"
             f"Finished :  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
         )
         self._file.close()
-
 
 
 # =========================
@@ -107,16 +97,19 @@ def delete_previous_outputs(log):
     """
     output_patterns = [
         "Step 01 — Cleaned Dataset (*).xlsx",
+        "Step 01 — Cleaned Dataset (Encoded) (*).xlsx",
+        "Step 01 — Cleaned Dataset * (Encoded).xlsx",
         "Step 02 — Reduced After Correlation (*).xlsx",
         "Step 03 — VIF Results (*).xlsx",
         "Step 03 — Dropped VIF Columns (*).xlsx",
         "Step 04 — Dataset After VIF (*).xlsx",
-        "Step 05 — Final No Outliers (*).xlsx",
-        "Step 05 — Removed Outliers (*).xlsx",
-        "Step 05 — Outliers Report (*).txt",
+        "Step 05 — Statistical Summary (*).xlsx",
         "Step 06 — Scaled Dataset (*).xlsx",
-        "Step 07 — Statistical Summary (*).xlsx",
+        "Step 07 — Final No Outliers (*).xlsx",
+        "Step 07 — Removed Outliers (*).xlsx",
+        "Step 07 — Outliers Report (*).txt",
         "Step 00 — Pipeline Log (*).txt",
+        "Fig — *(*).png",
     ]
 
     deleted = []
@@ -156,16 +149,25 @@ if __name__ == "__main__":
         log("Previous output files were not deleted.")
 
     # --- Output filenames (step-labelled + timestamped) ---
-    cleaned_file     = dated("01", "Cleaned Dataset")
-    reduced_file     = dated("02", "Reduced After Correlation")
-    vif_file         = dated("03", "VIF Results")
-    dropped_vif_file = dated("03", "Dropped VIF Columns")
-    multicol_file    = dated("04", "Dataset After VIF")
-    final_file       = dated("05", "Final No Outliers")
-    removed_file     = dated("05", "Removed Outliers")
-    outlier_report   = dated("05", "Outliers Report", ext="txt")
-    scaled_file      = dated("06", "Scaled Dataset")
-    stats_file       = dated("07", "Statistical Summary")
+    cleaned_file          = dated("01", "Cleaned Dataset")
+    # encoded intermediate path is auto-derived inside heatmap.py
+    # as "Step 01 — Cleaned Dataset (Encoded) (<timestamp>).xlsx"
+    encoded_intermediate  = dated("01", "Cleaned Dataset (Encoded)")
+    reduced_file          = dated("02", "Reduced After Correlation")
+    vif_file              = dated("03", "VIF Results")
+    dropped_vif_file      = dated("03", "Dropped VIF Columns")
+    multicol_file         = dated("04", "Dataset After VIF")
+    stats_file            = dated("05", "Statistical Summary")
+    scaled_file           = dated("06", "Scaled Dataset")
+    final_file            = dated("07", "Final No Outliers")
+    removed_file          = dated("07", "Removed Outliers")
+    outlier_report        = dated("07", "Outliers Report", ext="txt")
+
+    # --- Figure filenames (timestamped) ---
+    heatmap_fig    = dated_fig("Missingness Heatmap")
+    spearman_fig   = dated_fig("Spearman Heatmap")
+    boxplot_fig    = dated_fig("Boxplots Scaled")
+    qqplot_folder  = f"qqplots ({timestamp})"
 
     # --- Step 1: Missingness + Encoding + Imputation ---
     log("\n" + "=" * 50)
@@ -173,7 +175,9 @@ if __name__ == "__main__":
     log("=" * 50)
     df_cleaned, encoded_cols = run_missingness_pipeline(
         file_path=FILE_PATH,
-        output_path=cleaned_file
+        output_path=cleaned_file,
+        encoded_output_path=encoded_intermediate,
+        heatmap_path=heatmap_fig,
     )
     log(f"\nEncoded columns carried forward: {encoded_cols}")
 
@@ -185,6 +189,7 @@ if __name__ == "__main__":
         df=df_cleaned,
         encoded_cols=encoded_cols,
         output_path=reduced_file,
+        heatmap_path=spearman_fig,
         threshold=0.8
     )
 
@@ -202,32 +207,18 @@ if __name__ == "__main__":
         final_output_path=multicol_file
     )
 
-    # --- Step 4: Outlier Removal ---
-    log("\n" + "=" * 50)
-    log("STEP 4: Outlier Detection & Removal")
-    log("=" * 50)
-    df_final, removed_rows, outlier_summary = run_outlier_pipeline(
-        df=df_multicol,
-        encoded_cols=encoded_cols,
-        threshold=3,
-        save_plots=True,
-        output_path=final_file,
-        removed_output_path=removed_file,
-        report_path=outlier_report
-    )
-
     # --- Step 4.1: Colorize categorical columns ---
     log("\n" + "=" * 50)
     log("STEP 4.1: Colorize Categorical Columns")
     log("=" * 50)
-    colorize_binary_columns(final_file)
+    colorize_binary_columns(multicol_file)
 
     # --- Step 5: Statistical Feature Characteristics ---
     log("\n" + "=" * 50)
     log("STEP 5: Statistical Feature Characteristics")
     log("=" * 50)
     stats_summary = run_stats_pipeline(
-        df=df_final,
+        df=df_multicol,
         exclude_cols=encoded_cols,
         output_path=stats_file
     )
@@ -237,10 +228,25 @@ if __name__ == "__main__":
     log("STEP 6: Standard Scaling & Boxplot")
     log("=" * 50)
     df_scaled, scaler = run_boxplot_pipeline(
-        df=df_final,
+        df=df_multicol,
         exclude_cols=encoded_cols,
         output_path=scaled_file,
-        plot_path="boxplots_scaled.png"
+        plot_path=boxplot_fig
+    )
+
+    # --- Step 7: Outlier Detection & Removal (FINAL step) ---
+    log("\n" + "=" * 50)
+    log("STEP 7: Outlier Detection & Removal")
+    log("=" * 50)
+    df_final, removed_rows, outlier_summary = run_outlier_pipeline(
+        df=df_multicol,
+        encoded_cols=encoded_cols,
+        threshold=3,
+        save_plots=True,
+        output_path=final_file,
+        removed_output_path=removed_file,
+        report_path=outlier_report,
+        qqplot_folder=qqplot_folder,
     )
 
     # --- Summary ---
@@ -259,21 +265,22 @@ if __name__ == "__main__":
     for f in [
         log_file,
         cleaned_file,
+        encoded_intermediate,
         reduced_file,
         vif_file,
         dropped_vif_file,
         multicol_file,
+        stats_file,
+        scaled_file,
         final_file,
         removed_file,
         outlier_report,
-        scaled_file,
-        stats_file,
     ]:
         log(f"  - {f}")
 
-    log("  - missingness_heatmap.png")
-    log("  - spearman_heatmap.png")
-    log("  - boxplots_scaled.png")
-    log("  - qqplots/")
+    log(f"  - {heatmap_fig}")
+    log(f"  - {spearman_fig}")
+    log(f"  - {boxplot_fig}")
+    log(f"  - {qqplot_folder}/")
 
     log.close()

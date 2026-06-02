@@ -249,7 +249,8 @@ def run_outlier_pipeline(
     output_path="05_final_no_outliers.xlsx",
     removed_output_path="05_removed_outliers.xlsx",
     report_path="05_outliers_report.txt",
-    paper_col="Paper"
+    paper_col="Paper",
+    qqplot_folder="qqplots",
 ):
     """
     Full outlier pipeline:
@@ -280,7 +281,8 @@ def run_outlier_pipeline(
     summary      : dict
     """
     print(f"  Generating Q-Q plots ...")
-    qq_plots(df, exclude_cols=encoded_cols, save=save_plots, threshold=threshold)
+    qq_plots(df, exclude_cols=encoded_cols, save=save_plots,
+             folder=qqplot_folder, threshold=threshold)
 
     print(f"  Running Z-score outlier removal (threshold = {threshold}) ...")
     df_clean, removed_rows, summary = remove_outliers_zscore(
